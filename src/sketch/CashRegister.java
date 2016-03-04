@@ -12,19 +12,6 @@ public class CashRegister {
 	HashMap<String, Integer> count = new HashMap<String, Integer>();
 	Pay countPay = new Pay();
 
-	public static void main(String[] args) {
-
-		String inputLine = "['ITEM000001'" + "\n" + " , '  ITEM000001','ITEM000001','ITEM000001','ITEM000001','ITEM000001','ITEM000003-3','ITEM000005','ITEM000005','ITEM000005']";
-
-		CashRegister in = new CashRegister();
-		// 1.去掉无效字符
-		String input = in.replace(inputLine);
-		// 2.输入内容分析后使用HashMap存储，等待检测
-		in.analyse(input);
-		// 3.计算并打印小票
-		in.printTicket();
-	}
-
 	/*
 	 * Description: 替换掉字符串中的空格、换行、制表符等无效字符 Input: String类型的JSON字符串 Output: true
 	 * or false
